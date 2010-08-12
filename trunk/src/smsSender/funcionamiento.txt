@@ -1,0 +1,1 @@
+* INSTALACION:	Pasos para win:		1) Instalar el cygwin ( con gcc, g++ y make )		2) Descomprimir el smstools en /usr/src		3) Make , Make install 	Pasos para linux:		1) instalar el smstools3	4) Usar el archivo de configuracion smsd.conf	* USO	- Ejecutar el smsd con smsd -t	- Para mandar mensaje hacer sendsms	- todos los mensajes los guarda en /var/spool/sms
