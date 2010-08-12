@@ -95,13 +95,10 @@ public class CommSMSViaArchivo  {
 					BufferedReader archivo = new BufferedReader(new FileReader(archivoEntrada.getAbsoluteFile()));;
 			        String tel = archivo.readLine();
 		        
-			        tel = tel.split("From: ")[1];
+			        tel = tel.split(":")[1];
 			        
 			        String mensaje = archivo.readLine();
-			        while (mensaje.compareTo("")!=0){
-			        	mensaje = archivo.readLine();
-			        }
-			        mensaje = archivo.readLine();
+			        mensaje = mensaje.split(":")[1];
 			        
 			        sms = new SMS(tel,mensaje);
 			        

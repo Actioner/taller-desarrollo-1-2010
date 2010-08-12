@@ -10,6 +10,8 @@ public class ParserSMS {
 		if (mensaje.getMensaje().compareToIgnoreCase("GATOS")==0)
 			return respuestaGATOS(mensaje.getTelefono());
 		
+		if (mensaje.getMensaje().compareToIgnoreCase("RESTAURANTE")==0)
+			return respuestaRESTAURANTE(mensaje.getTelefono());
 		
 		return respuestaERROR(mensaje);
 	}
@@ -22,6 +24,11 @@ public class ParserSMS {
 	
 	public SMS respuestaGATOS(String destino){
 		SMS resp = new SMS(destino, "Lugares con el rubro GATOS \nBosques de Palermo");
+		return resp;
+	}
+	
+	public SMS respuestaRESTAURANTE(String destino){
+		SMS resp = new SMS(destino, "Lugares con el rubro RESTAURANTE \nMcDonalds \nEl Federal \nEl Viejo Almacen");
 		return resp;
 	}
 	
